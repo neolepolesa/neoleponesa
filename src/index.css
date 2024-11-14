@@ -1,0 +1,259 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('/OIP.jpg');
+  background-size: cover;
+  color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2, h3, h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form Inputs and Buttons */
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+}
+
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Layout Containers */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color:transparent;
+}
+
+.auth-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form h2 {
+  margin-bottom: 20px;
+}
+
+/* Dashboard and Tables */
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(244, 241, 241, 0.808);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-container nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.dashboard-container th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.dashboard-container th {
+  background-color: #007BFF;
+  color: white;
+}
+
+.dashboard-container tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.dashboard-container tr:hover {
+  background-color: #e9f5ff;
+}
+
+.dashboard-container .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.dashboard-container .button-container button {
+  width: auto;
+}
+
+/* Product Management Page */
+.product-form-container, .user-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-form-container form, .user-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-form-container input, .user-form-container input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-form-container button, .user-form-container button {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.product-form-container h2, .user-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-form-container .product-list, .user-form-container .user-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.product-form-container .product-list li, .user-form-container .user-list li {
+  margin-bottom: 10px;
+}
+
+/* Back to Dashboard Button */
+.back-button {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Not Found Page */
+.not-found-container {
+  text-align: center;
+  margin-top: 50px;
+}
+/* Add these styles to your main CSS file */
+.image-carousel {
+  position: relative;
+  width: 100%; /* Make the carousel take up the full width of the parent container */
+  height: 200px;  /* Adjust the height of the carousel container */
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* Container for each image within the carousel */
+.carousel-image {
+  position: absolute;
+  width: 50%;  /* Take up the full width of the container */
+  height: 50%; /* Take up the full height of the container */
+  opacity: 0;
+  animation: imageRotation 12s infinite;  /* The animation duration is 12 seconds */
+}
+
+/* Styling for the images themselves */
+.carousel-image img {
+  width: 10%;       /* Reduced size for the rotating images */
+  height: auto;     /* Maintain the aspect ratio */
+  object-fit: cover; /* Ensures images maintain aspect ratio and cover the space */
+  margin: 0 auto;  /* Center the images within the carousel container */
+  display: block;   /* Block display to align with center */
+}
+
+/* Keyframes to animate the opacity for the rotating effect */
+@keyframes imageRotation {
+  0%, 33% {
+      opacity: 1;
+  }
+  34%, 100% {
+      opacity: 0;
+  }
+}
+
+/* Set a delay for each image to appear in sequence */
+.carousel-image:nth-child(1) {
+  animation-delay: 0s;  /* First image appears immediately */
+}
+
+.carousel-image:nth-child(2) {
+  animation-delay: 4s;  /* Second image appears after 4 seconds */
+}
+
+.carousel-image:nth-child(3) {
+  animation-delay: 8s;  /* Third image appears after 8 seconds */
+}
